@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "astrocyte-db": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/home/ty/Repositories/ai_workspace/astrocyte_db_prototype",
+        "run",
+        "python",
+        "mcp_server/server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "/home/ty/Repositories/ai_workspace/astrocyte_db_prototype"
+      }
+    }
+  }
+}
