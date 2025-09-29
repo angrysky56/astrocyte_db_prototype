@@ -1,7 +1,7 @@
 [project]
 name = "astrocyte-db-prototype"
-version = "0.1.0"
-description = "Astrocyte-inspired active database prototype demonstrating complex event processing"
+version = "0.2.0"
+description = "Astrocyte-inspired active database with persistent storage and query capabilities"
 authors = [
     { name = "Ty", email = "angrysky56@github" }
 ]
@@ -10,6 +10,14 @@ requires-python = ">=3.12"
 dependencies = [
     "redis==6.4.0",
     "pydantic==2.10.5",
+    "fastapi==0.115.13",
+    "uvicorn[standard]==0.34.0",
+    "sqlalchemy==2.0.36",
+    "asyncpg==0.30.0",
+    "alembic==1.14.0",
+    "psycopg2-binary==2.9.10",
+    "python-multipart==0.0.20",
+    "websockets==14.1",
 ]
 
 [project.optional-dependencies]
@@ -17,6 +25,7 @@ dev = [
     "pytest==8.3.4",
     "pytest-asyncio==0.25.2",
     "ruff==0.8.4",
+    "httpx==0.28.1",
 ]
 
 [build-system]

@@ -121,6 +121,9 @@ docker stop astrocyte_redis && docker rm astrocyte_redis
 python examples/demo_workflow.py
 ```
 
+### DB- Work in Progress
+Full details: See /STATUS.md in the project directory for comprehensive guide including WebSocket examples, troubleshooting, and architecture overview.
+
 ### Manual Testing
 
 The demo workflow (`examples/demo_workflow.py`) runs all components together. For individual component testing, you can examine the source files:

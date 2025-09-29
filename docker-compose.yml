@@ -13,5 +13,23 @@ services:
       timeout: 3s
       retries: 5
 
+  postgres:
+    image: timescale/timescaledb:latest-pg17
+    container_name: astrocyte_postgres
+    environment:
+      POSTGRES_USER: astrocyte
+      POSTGRES_PASSWORD: astrocyte_dev_password
+      POSTGRES_DB: astrocyte_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U astrocyte"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
 volumes:
   redis_data:
+  postgres_data:
